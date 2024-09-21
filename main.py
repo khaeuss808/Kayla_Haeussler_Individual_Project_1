@@ -2,18 +2,35 @@
 Main cli or app entry point
 """
 
-from mylib.calculator import add
-import click
+from mylib.calculator import *
 
-#var=1;var=2
 
-@click.command("add")
-@click.argument("a", type=int)
-@click.argument("b", type=int)
-def add_cli(a, b):
-    click.echo(add(a, b))
+def get_describe():
+    data = load_dataset()
+    return data.describe()
+
+
+def col_summ_stats(col):
+    data = load_dataset()
+    mean = get_mean(data, col)
+    median = get_median(data, col)
+    std = get_standardDev(data, col)
+    print(f"Column of Interest: {col}")
+    print(f"Mean: {mean: .2f}")
+    print(f"Median: {median: .2f}")
+    print(f"Standard Deviation: {std: .2f}")
+    return mean, median, std
+
+
+def generate_visualization(col, col2):
+    data = load_dataset()
+    create_histogram(data, col)
+    create_scatter(data, col, col2)
 
 
 if __name__ == "__main__":
-    # pylint: disable=no-value-for-parameter
-    add_cli()
+    print(get_describe())
+    col_of_intrst = "Exam_Score"
+    compare_col = "Hours_Studied"
+    generate_visualization(col_of_intrst, compare_col)
+    col_summ_stats(col_of_intrst)
