@@ -23,6 +23,7 @@ The purpose of this assignment was to create a  Python template to be used for f
 *	__`GitHub Actions`__ performs all four Makefile commands with __badges__ for each one in the `README.md`
 
 # Project Directory
+```
 Kayla_Haeussler_Individual_Project_1/
 ├── __pycache__/
 ├── .devcontainer/
@@ -50,7 +51,7 @@ Kayla_Haeussler_Individual_Project_1/
 ├── StudentPerformanceFactors.csv
 ├── test_lib.py
 └── test_main.py
-
+```
 # Project Structure
 
 
