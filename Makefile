@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest -vv --nbval -cov=mylib -cov=main test_*.py *.ipynb
 
 format:	
 	black *.py 

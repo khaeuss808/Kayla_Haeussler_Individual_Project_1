@@ -2,7 +2,14 @@
 Main cli or app entry point
 """
 
-from mylib.calculator import *
+from mylib.calculator import (
+    load_dataset,
+    get_mean,
+    get_median,
+    get_standardDev,
+    create_histogram,
+    create_scatter,
+)
 
 
 def get_describe():
@@ -26,6 +33,11 @@ def generate_visualization(col, col2):
     data = load_dataset()
     create_histogram(data, col)
     create_scatter(data, col, col2)
+
+
+def save_to_md():
+    with open("test.md", "a") as file:
+        file.write("test")
 
 
 if __name__ == "__main__":

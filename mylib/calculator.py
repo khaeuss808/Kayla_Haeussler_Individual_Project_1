@@ -26,7 +26,7 @@ def get_standardDev(df, col):
     return df[col].std()
 
 
-def create_histogram(df, col="Exam_Score"):
+def create_histogram(df, col):
     plt.figure(figsize=(10, 6))
     sns.histplot(df[col].dropna(), bins=30, kde=True)
     plt.title("Histogram of " + col)

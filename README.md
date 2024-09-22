@@ -1,7 +1,7 @@
 # IDS 706: Individual Project 1
 
-Continous Integration using Github Actions of Python Data Science Project
-Kayla Haeussler
+## Continous Integration using Github Actions of Python Data Science Project
+### Kayla Haeussler
 
 The purpose of this assignment was to create a  Python template to be used for future projects with best practices in place for testing, development and deployment.
 
