@@ -44,5 +44,5 @@ if __name__ == "__main__":
     print(get_describe())
     col_of_intrst = "Exam_Score"
     compare_col = "Hours_Studied"
-    generate_visualization(col_of_intrst, compare_col)
     col_summ_stats(col_of_intrst)
+    generate_visualization(col_of_intrst, compare_col)
