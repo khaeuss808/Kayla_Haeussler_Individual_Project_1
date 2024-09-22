@@ -14,7 +14,6 @@ def test_load_dataset():
 def test_summary_stats():
     student_data = load_dataset()
     col = "Exam_Score"
-    compare_col = "Hours_Studied"
     test_mean = get_mean(student_data, col)
     test_median = get_median(student_data, col)
     test_std = get_standardDev(student_data, col)
