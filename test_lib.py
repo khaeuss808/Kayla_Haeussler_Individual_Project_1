@@ -2,14 +2,7 @@
 Test goes here
 """
 
-from mylib.calculator import (
-    load_dataset,
-    get_mean,
-    get_median,
-    get_standardDev,
-    create_histogram,
-    create_scatter,
-)
+from mylib.calculator import load_dataset, get_mean, get_median, get_standardDev
 
 
 def test_load_dataset():
@@ -26,6 +19,9 @@ def test_summary_stats():
     test_median = get_median(student_data, col)
     test_std = get_standardDev(student_data, col)
     describe_test = student_data.describe()
+    assert describe_test.loc["mean", "Exam_Score"] == test_mean
+    assert describe_test.loc["50%", "Exam_Score"] == test_median
+    assert describe_test.loc["std", "Exam_Score"] == test_std
 
 
 if __name__ == "__main__":
