@@ -26,7 +26,7 @@ def col_summ_stats(col):
     print(f"Mean: {mean: .2f}")
     print(f"Median: {median: .2f}")
     print(f"Standard Deviation: {std: .2f}")
-    return mean, median, std
+    return {"mean": mean, "median": median, "std": std}
 
 
 def generate_visualization(col, col2):
